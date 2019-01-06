@@ -16,10 +16,6 @@
 	</style>
 	
 <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" method="post">
-  <div>
-    <label for="nom">numero de livre:</label>
-    <input type="text" id="nom" name="user_name">
-  </div>
 <div>
     <label for="nom">Nom de livre:</label>
     <input type="text" id="nom" name="user_name">

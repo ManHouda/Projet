@@ -11,4 +11,9 @@ class FrontController extends Controller
 		return view('frontview.home.homeContent');
 	}
 
+	public function addbook()
+	{
+		return view('frontview.addbooks');
+	}
+
 }

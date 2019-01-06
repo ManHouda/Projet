@@ -281,7 +281,7 @@
               
             </div>
             <div class="outs_more-buttn" style="width: 600px;">
-                  <a href="add.blade.php">ADD Books</a>
+                  <a href="{{'/AddBook'}}">ADD Books</a>
              </div>
           </div>
         </div>

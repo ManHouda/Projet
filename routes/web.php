@@ -19,3 +19,4 @@ Route::get('/index','IndexController@showIndex');
 Route::get('/addBooks','AddBooksController@showAddBooks');
 */
 Route::get('/','FrontController@index');
+Route::get('/AddBook','FrontController@addbook');
