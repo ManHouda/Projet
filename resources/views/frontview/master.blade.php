@@ -87,16 +87,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{'/'}}">Home</a>
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a href="#blog" class="nav-link scroll" >Library</a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{'/login'}}" class="nav-link">Sign in</a>
+                  <a href="#Sign in" class="nav-link scroll">Sign in</a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{'/register'}}" class="nav-link">Sign up</a>
+                  <a href="#Sign up" class="nav-link scroll">Sign up</a>
                 </li>
                 <li class="nav-item">
                 <a href="#team" class="nav-link scroll">Team</a>
@@ -294,11 +294,29 @@
     <!--stats-->
     
     <!--//stats-->
-    <!--Team-->
+     <!--Team-->
     <section class="team py-lg-4 py-md-3 py-sm-3 py-3" id="team">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
         <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Team </h3>
         <div class="row ">
+          <div class="col-lg-3 col-md-6 col-sm-6 profile">
+            <div class="team-shadow">
+              <div class="img-box">
+                
+                <div class="list-social-icons">
+                  <ul>
+                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fas fa-envelope"></span></a></li>
+                    <li><a href="#"><span class="fas fa-rss"></span></a></li>
+                    <li><a href="#"><span class="fab fa-vk"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="team-w3layouts-info py-lg-4 py-3 text-center" data-blast="bgColor">
+                
+              </div>
+            </div>
+          </div>
           <div class="col-lg-3 col-md-6 col-sm-6 profile">
             <div class="team-shadow">
               <div class="img-box">
@@ -339,10 +357,29 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 profile">
+            <div class="team-shadow">
+              <div class="img-box">
+                <div class="team-list-img">
+                 
+                </div>
+                <div class="list-social-icons">
+                  <ul>
+                    <li><a href="#"><span class="fab fa-facebook-f" ></span></a></li>
+                    <li><a href="#"><span class="fas fa-envelope"></span></a></li>
+                    <li><a href="#"><span class="fas fa-rss"></span></a></li>
+                    <li><a href="#"><span class="fab fa-vk"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="team-w3layouts-info py-lg-4 py-3 text-center" data-blast="bgColor">
+                
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!--//Team-->
     <!--contact -->
     <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
@@ -429,7 +466,7 @@
           </div>
           <div class="modal-body">
             <!--<img src="images/b2.jpg" alt="" class="img-fluid">-->
-            <p> Ce livre vous permettra de créer des sites remarquables et faciles utilisation. Aucune expérience préalable nest requise !brCe livre est destiné aux designers et développeurs, éditeurs de contenu et créateurs, équipes marketing et e-commerce</p>
+            <p> Ce livre vous permettra de créer des sites remarquables et faciles utilisation. Aucune expérience préalable nest requise !brCe livre est destiné aux designers et développeurs éditeurs de contenu et créateurs, équipes marketing et e-commerce</p>
            
           </div>
           <div class="modal-footer">
@@ -450,7 +487,7 @@
           </div>
           <div class="modal-body">
          <p style="margin-left: 50px; font-size: 20px; color: red;"> Votre Emprunt valable 30 jours </p>
-          <h5>  On vous souhaite une bonne lecture </h5> 
+          <h5>  Nous vous souhaitons une bonne lecture </h5> 
            <br>
           
         
