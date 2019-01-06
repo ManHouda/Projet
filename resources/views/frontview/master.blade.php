@@ -87,16 +87,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{'/'}}">Home</a>
                 </li>
                 <li class="nav-item">
                   <a href="#blog" class="nav-link scroll" >Library</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#Sign in" class="nav-link scroll">Sign in</a>
+                  <a href="{{'/login'}}" class="nav-link">Sign in</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#Sign up" class="nav-link scroll">Sign up</a>
+                  <a href="{{'/register'}}" class="nav-link">Sign up</a>
                 </li>
                 <li class="nav-item">
                 <a href="#team" class="nav-link scroll">Team</a>
@@ -302,24 +302,6 @@
           <div class="col-lg-3 col-md-6 col-sm-6 profile">
             <div class="team-shadow">
               <div class="img-box">
-                
-                <div class="list-social-icons">
-                  <ul>
-                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                    <li><a href="#"><span class="fas fa-envelope"></span></a></li>
-                    <li><a href="#"><span class="fas fa-rss"></span></a></li>
-                    <li><a href="#"><span class="fab fa-vk"></span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-w3layouts-info py-lg-4 py-3 text-center" data-blast="bgColor">
-                
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 profile">
-            <div class="team-shadow">
-              <div class="img-box">
                 <img src="images/houda.png" alt="">
                 <div class="list-social-icons">
                   <ul>
@@ -353,26 +335,6 @@
               </div>
               <div class="team-w3layouts-info py-lg-4 py-3 text-center" data-blast="bgColor">
                 <h4 class="text-white mb-2">Mansouri Houda</h4>
-                
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 profile">
-            <div class="team-shadow">
-              <div class="img-box">
-                <div class="team-list-img">
-                 
-                </div>
-                <div class="list-social-icons">
-                  <ul>
-                    <li><a href="#"><span class="fab fa-facebook-f" ></span></a></li>
-                    <li><a href="#"><span class="fas fa-envelope"></span></a></li>
-                    <li><a href="#"><span class="fas fa-rss"></span></a></li>
-                    <li><a href="#"><span class="fab fa-vk"></span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-w3layouts-info py-lg-4 py-3 text-center" data-blast="bgColor">
                 
               </div>
             </div>
@@ -488,7 +450,7 @@
           </div>
           <div class="modal-body">
          <p style="margin-left: 50px; font-size: 20px; color: red;"> Votre Emprunt valable 30 jours </p>
-          <h5>  Nous vous souhaitons une bonne lecture </h5> 
+          <h5>  On vous souhaite une bonne lecture </h5> 
            <br>
           
         
