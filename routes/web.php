@@ -20,3 +20,7 @@ Route::get('/addBooks','AddBooksController@showAddBooks');
 */
 Route::get('/','FrontController@index');
 Route::get('/AddBook','FrontController@addbook');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/insert','HomeController@Add');
