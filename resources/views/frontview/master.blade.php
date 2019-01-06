@@ -10,11 +10,11 @@
       SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
     <script>
       addEventListener("load", function () {
-      	setTimeout(hideURLbar, 0);
+        setTimeout(hideURLbar, 0);
       }, false);
       
       function hideURLbar() {
-      	window.scrollTo(0, 1);
+        window.scrollTo(0, 1);
       }
     </script>
     <!--//meta tags ends here-->
@@ -281,8 +281,8 @@
               
             </div>
             <div class="outs_more-buttn" style="width: 600px;">
-                  <a href="add.blade.php">ADD Books</a>
-             </div>
+                  <a href="addBooks.html">ADD Books</a>
+                </div>
           </div>
         </div>
       </div>
@@ -466,12 +466,38 @@
             </button>
           </div>
           <div class="modal-body">
-            <img src="images/b2.jpg" alt="" class="img-fluid">
+            <!--<img src="images/b2.jpg" alt="" class="img-fluid">-->
+            <p> Ce livre vous permettra de créer des sites remarquables et faciles utilisation. Aucune expérience préalable nest requise !brCe livre est destiné aux designers et développeurs, éditeurs de contenu et créateurs, équipes marketing et e-commerce</p>
            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary"><a href="#" data-toggle="modal" data-target="#Emprunter" data-blast="bgColor">Emprunt</a> </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Emprunter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLiveLabel" data-blast="color">Enjoy reading  </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+         <p style="margin-left: 50px; font-size: 20px; color: red;"> Votre Emprunt valable 30 jours </p>
+          <h5>  Nous vous souhaitons une bonne lecture </h5> 
+           <br>
+          
+        
+           <img src="images/livre1.png" alt="" class="img-fluid">
+           
+          </div>
+          <div class="modal-footer">
+            
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Accepter</button>
           </div>
         </div>
       </div>
@@ -488,25 +514,25 @@
     <script>
       // You can also use "$(window).load(function() {"
       $(function () {
-      	// Slideshow 4
-      	$("#slider4").responsiveSlides({
-      		auto: true,
-      		pager:false,
-      		nav:true ,
-      		speed: 900,
-      		namespace: "callbacks",
-      		before: function () {
-      			$('.events').append("<li>before event fired.</li>");
-      		},
-      		after: function () {
-      			$('.events').append("<li>after event fired.</li>");
-      		}
-      	});
+        // Slideshow 4
+        $("#slider4").responsiveSlides({
+          auto: true,
+          pager:false,
+          nav:true ,
+          speed: 900,
+          namespace: "callbacks",
+          before: function () {
+            $('.events').append("<li>before event fired.</li>");
+          },
+          after: function () {
+            $('.events').append("<li>after event fired.</li>");
+          }
+        });
       
       });
     </script>
-    <!--// responsiveslides banner-->		  
-    <!--responsive tabs-->	 
+    <!--// responsiveslides banner-->     
+    <!--responsive tabs-->   
     <script src="js/easy-responsive-tabs.js"></script>
     <script>
       $(document).ready(function () {
@@ -526,25 +552,25 @@
       });
        
     </script>
-    <!--// responsive tabs-->	
+    <!--// responsive tabs--> 
     <!--About OnScroll-Number-Increase-JavaScript -->
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.countup.js"></script>
     <script>
       $('.counter').countUp();
     </script>
-    <!-- //OnScroll-Number-Increase-JavaScript -->	  
+    <!-- //OnScroll-Number-Increase-JavaScript -->    
     <!-- start-smoth-scrolling -->
     <script src="js/move-top.js"></script>
     <script src="js/easing.js"></script>
     <script>
       jQuery(document).ready(function ($) {
-      	$(".scroll").click(function (event) {
-      		event.preventDefault();
-      		$('html,body').animate({
-      			scrollTop: $(this.hash).offset().top
-      		}, 900);
-      	});
+        $(".scroll").click(function (event) {
+          event.preventDefault();
+          $('html,body').animate({
+            scrollTop: $(this.hash).offset().top
+          }, 900);
+        });
       });
     </script>
     <!-- start-smoth-scrolling -->
@@ -552,17 +578,17 @@
     <script>
       $(document).ready(function () {
       
-      	var defaults = {
-      		containerID: 'toTop', // fading element id
-      		containerHoverID: 'toTopHover', // fading element hover id
-      		scrollSpeed: 1200,
-      		easingType: 'linear'
-      	};
+        var defaults = {
+          containerID: 'toTop', // fading element id
+          containerHoverID: 'toTopHover', // fading element hover id
+          scrollSpeed: 1200,
+          easingType: 'linear'
+        };
       
       
-      	$().UItoTop({
-      		easingType: 'easeOutQuart'
-      	});
+        $().UItoTop({
+          easingType: 'easeOutQuart'
+        });
       
       });
     </script>
