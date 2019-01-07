@@ -87,16 +87,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{'/'}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a href="#blog" class="nav-link scroll" >Library</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#Sign in" class="nav-link scroll">Sign in</a>
+                  <a href="{{'/login'}}" class="nav-link">Sign in</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#Sign up" class="nav-link scroll">Sign up</a>
+                  <a href="{{'/register'}}" class="nav-link">Sign up</a>
                 </li>
                 <li class="nav-item">
                 <a href="#team" class="nav-link scroll">Team</a>
