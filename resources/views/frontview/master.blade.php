@@ -65,7 +65,16 @@
                 </li>
               </ul>
             </div>
+
+
             <div class="col-lg-6 col-md-5 col-sm-3 icons px-0">
+
+            @if(!empty(Session::get('error')))
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                permission denied !
+        </div>
+      @endif
               <ul>
                 <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
                 <li><a href="#"><span class="fas fa-envelope"></span></a></li>
@@ -87,17 +96,29 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{'/'}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a href="#blog" class="nav-link scroll" >Library</a>
                 </li>
-                <li class="nav-item">
-                  <a href="#Sign in" class="nav-link scroll">Sign in</a>
+                <!-- <li class="nav-item">
+                  <a href="{{'/login'}}" class="nav-link">Sign in</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#Sign up" class="nav-link scroll">Sign up</a>
-                </li>
+                  <a href="{{'/register'}}" class="nav-link">Sign up</a>
+                </li> -->
+              <li class="nav-item">
+              <a  href="{{ route('logout') }}" class="nav-link"
+                    onclick="event.preventDefault();
+                   document.getElementById('logout-form').submit();">
+                  Logout
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+              </li>
+
+
                 <li class="nav-item">
                 <a href="#team" class="nav-link scroll">Team</a>
               </li>
@@ -108,11 +129,14 @@
             </div>
           </div>
         </nav>
+
+
         <!--//navigation section -->
         <div class="clearfix"> </div>
       </div>
       <!--banner -->
       <!-- Slideshow 4 -->
+
       <div class="slider">
         <div class="callbacks_container">
           <ul class="rslides" id="slider4">
@@ -179,11 +203,14 @@
       <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
         <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Books </h3>
         <div class="row">
+
+        @if (count($books)>0)
+        @foreach ($books->all() as $book)
           <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
             <div class="clients-color">
               <img src="images/livre1.png" class="img-fluid" alt="">
               <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">la boite a merveille </a></h4>
+                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">{{ $book->titre }} </a></h4>
                 <div class="news-date my-3">
                 </div>
                
@@ -193,98 +220,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-6  blog-grid-flex">
-            <div class="clients-color">
-              <img src="images/livre1.png" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Antigone </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    
-                    
-                  </ul>
-                </div>
-                
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">read</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
-            <div class="clients-color">
-              <img src="images/livre1.png" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Livre </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    
-                  </ul>
-                </div>
-                
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">read</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-sm-3 mt-3">
-            <div class="clients-color">
-              <img src="images/livre1.png" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">livre3 </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    
-                  </ul>
-                </div>
-                
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Read</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-sm-3 mt-3" >
-            <div class="clients-color">
-              <img src="images/livre1.png" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">livre</a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    
-                  </ul>
-                </div>
-                
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Read</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-sm-3 mt-3">
-            <div class="clients-color">
-              <img src="images/livre1.png" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Livre2 </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                   
-                    
-                  </ul>
-                </div>
-                
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Read</a>
-                </div>
-              </div>
-              
-            </div>
-            <div class="outs_more-buttn" style="width: 600px;">
+
+          @endforeach
+          @endif
+
+          <div class="outs_more-buttn" style="width: 600px;">
                   <a href="{{'/AddBook'}}">ADD Books</a>
-             </div>
           </div>
         </div>
+        
       </div>
     </section>
     <!--//blog -->

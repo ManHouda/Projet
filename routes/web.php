@@ -18,9 +18,14 @@
 Route::get('/index','IndexController@showIndex');
 Route::get('/addBooks','AddBooksController@showAddBooks');
 */
-Route::get('/','FrontController@index');
-Route::get('/AddBook','FrontController@addbook');
+Route::get('/','FrontController@authentication');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/insert','HomeController@Add');
+Route::group(['middleware'=>['web','auth']], function(){
+
+    Route::get('/home', 'FrontController@index')->name('home');
+    Route::post('/insert','AddController@Addbook');
+    Route::get('/AddBook','AddController@rediriger');
+
+
+});
