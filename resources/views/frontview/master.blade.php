@@ -65,7 +65,16 @@
                 </li>
               </ul>
             </div>
+
+
             <div class="col-lg-6 col-md-5 col-sm-3 icons px-0">
+
+            @if(!empty(Session::get('error')))
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                permission denied !
+        </div>
+      @endif
               <ul>
                 <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
                 <li><a href="#"><span class="fas fa-envelope"></span></a></li>
@@ -93,11 +102,23 @@
                   <a href="#blog" class="nav-link scroll" >Library</a>
                 </li>
                 <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a href="{{'/login'}}" class="nav-link">Sign in</a>
                 </li>
                 <li class="nav-item">
                   <a href="{{'/register'}}" class="nav-link">Sign up</a>
                 </li>
+                </li> -->
+              <li class="nav-item">
+              <a  href="{{ route('logout') }}" class="nav-link"
+                    onclick="event.preventDefault();
+                   document.getElementById('logout-form').submit();">
+                  Logout
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+              </li>
                 <li class="nav-item">
                 <a href="#team" class="nav-link scroll">Team</a>
               </li>
@@ -108,11 +129,14 @@
             </div>
           </div>
         </nav>
+
+
         <!--//navigation section -->
         <div class="clearfix"> </div>
       </div>
       <!--banner -->
       <!-- Slideshow 4 -->
+
       <div class="slider">
         <div class="callbacks_container">
           <ul class="rslides" id="slider4">
@@ -179,11 +203,14 @@
       <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
         <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Books </h3>
         <div class="row">
+
+        @if (count($books)>0)
+        @foreach ($books->all() as $book)
           <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
             <div class="clients-color">
               <img src="images/livre1.png" class="img-fluid" alt="">
               <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">la boite a merveille </a></h4>
+                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">{{ $book->titre }} </a></h4>
                 <div class="news-date my-3">
                 </div>
                
@@ -193,98 +220,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-6  blog-grid-flex">
-            <div class="clients-color">
-              <img src="images/livre1.png" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Antigone </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    
-                    
-                  </ul>
-                </div>
-                
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">read</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
-            <div class="clients-color">
-              <img src="images/livre1.png" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Livre </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    
-                  </ul>
-                </div>
-                
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">read</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-sm-3 mt-3">
-            <div class="clients-color">
-              <img src="images/livre1.png" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">livre3 </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    
-                  </ul>
-                </div>
-                
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Read</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-sm-3 mt-3" >
-            <div class="clients-color">
-              <img src="images/livre1.png" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">livre</a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    
-                  </ul>
-                </div>
-                
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Read</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-sm-3 mt-3">
-            <div class="clients-color">
-              <img src="images/livre1.png" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Livre2 </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                   
-                    
-                  </ul>
-                </div>
-                
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Read</a>
-                </div>
-              </div>
-              
-            </div>
-            <div class="outs_more-buttn" style="width: 600px;">
+
+          @endforeach
+          @endif
+
+          <div class="outs_more-buttn" style="width: 600px;">
                   <a href="{{'/AddBook'}}">ADD Books</a>
-             </div>
           </div>
         </div>
+        
       </div>
     </section>
     <!--//blog -->
@@ -294,7 +238,7 @@
     <!--stats-->
     
     <!--//stats-->
-    <!--Team-->
+     <!--Team-->
     <section class="team py-lg-4 py-md-3 py-sm-3 py-3" id="team">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
         <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Team </h3>
@@ -380,7 +324,6 @@
         </div>
       </div>
     </section>
-    <!--//Team-->
     <!--contact -->
     <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
@@ -467,7 +410,7 @@
           </div>
           <div class="modal-body">
             <!--<img src="images/b2.jpg" alt="" class="img-fluid">-->
-            <p> Ce livre vous permettra de créer des sites remarquables et faciles utilisation. Aucune expérience préalable nest requise !brCe livre est destiné aux designers et développeurs, éditeurs de contenu et créateurs, équipes marketing et e-commerce</p>
+            <p> Ce livre vous permettra de créer des sites remarquables et faciles utilisation. Aucune expérience préalable nest requise !brCe livre est destiné aux designers et développeurs éditeurs de contenu et créateurs, équipes marketing et e-commerce</p>
            
           </div>
           <div class="modal-footer">

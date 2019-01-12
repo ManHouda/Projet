@@ -15,10 +15,12 @@
 		}
 	</style>
 	
-<form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" method="post">
+	<form action="{{ url('/insert') }}" method="post">
+
+{{csrf_field()}}
 <div>
-    <label for="nom">Nom de livre:</label>
-    <input type="text" id="nom" name="user_name">
+    <label for="nom">titre de livre:</label>
+    <input type="text" id="nom" name="titre">
   </div>
 
   <div>
@@ -33,18 +35,19 @@
     <input type="auteur" id="courriel" name="auteur">
   </div>
 <div>
-    <label for="courriel">Editeur de livre :</label>
-    <input type="Editeur" id="courriel" name="editeur">
+    <label for="courriel">Edition de livre :</label>
+    <input type="edition" id="courriel" name="edition">
   </div>
 
 
 <div>
     <label for="message">Description de livre :</label>
-    <textarea></textarea>
+<!--     <textarea></textarea> -->
+	<input type="text" name="description"/>
   </div>
  
   <div class="button">
-    <button type="submit">Valider</button>
+		<button type="submit" >validate</button>
   </div>
 </form>
 
