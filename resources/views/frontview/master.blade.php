@@ -101,11 +101,13 @@
                 <li class="nav-item">
                   <a href="#blog" class="nav-link scroll" >Library</a>
                 </li>
+                <li class="nav-item">
                 <!-- <li class="nav-item">
                   <a href="{{'/login'}}" class="nav-link">Sign in</a>
                 </li>
                 <li class="nav-item">
                   <a href="{{'/register'}}" class="nav-link">Sign up</a>
+                </li>
                 </li> -->
               <li class="nav-item">
               <a  href="{{ route('logout') }}" class="nav-link"
@@ -117,8 +119,6 @@
                     {{ csrf_field() }}
                 </form>
               </li>
-
-
                 <li class="nav-item">
                 <a href="#team" class="nav-link scroll">Team</a>
               </li>
